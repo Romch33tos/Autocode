@@ -1,33 +1,41 @@
 using System;
+using System.Windows.Forms;
 
-public class RegionForm : IRegionView
+public partial class RegionForm : Form, IRegionView
 {
-  private readonly RegionFormUI _ui;
-
   public RegionForm()
   {
-    _ui = new RegionFormUI();
-    _ui.CodeEntered += (s, e) => CodeEntered?.Invoke(this, e);
-    _ui.HelpRequested += (s, e) => HelpRequested?.Invoke(this, e);
+    InitializeComponent();
+    SetupEvents();
+  }
+
+  private void SetupEvents()
+  {
+    codeTextBox.KeyDown += (sender, e) => 
+    {
+      if (e.KeyCode == Keys.Enter)
+      {
+        e.SuppressKeyPress = true;
+        CodeEntered?.Invoke(this, EventArgs.Empty);
+        InputCode = string.Empty;
+      }
+    };
+    
+    helpToolStripMenuItem.Click += (sender, e) => HelpRequested?.Invoke(this, EventArgs.Empty);
   }
 
   public string InputCode
   {
-    get => _ui.InputCode;
-    set => _ui.InputCode = value;
+    get => codeTextBox.Text;
+    set => codeTextBox.Text = value;
   }
 
   public string ResultText
   {
-    get => _ui.ResultText;
-    set => _ui.ResultText = value;
+    get => resultTextBox.Text;
+    set => resultTextBox.Text = value;
   }
 
   public event EventHandler CodeEntered;
   public event EventHandler HelpRequested;
-
-  public void Show()
-  {
-    _ui.Show();
-  }
 }
