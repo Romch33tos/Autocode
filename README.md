@@ -6,4 +6,4 @@
 
 ## Скриншот приложения
 
-<img width="328" height="188" alt="Скриншот" src="https://github.com/user-attachments/assets/a5c147b9-a872-4ef3-a1a1-dc46df7d4fc5" />
+<img width="328" height="189" alt="Screenshot" src="https://github.com/user-attachments/assets/7e963f82-da75-4146-94e1-96ade6a75dc2" />
