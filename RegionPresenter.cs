@@ -30,8 +30,8 @@ public class RegionPresenter
   private void OnHelpRequested(object sender, EventArgs e)
   {
     MessageBox.Show(
-      "1. Введите две последние цифры кода и нажмите Enter.\n2. Название региона отобразится в окне вывода.",
-      "Помощь",
+      "Введите две последние цифры кода региона и нажмите\nклавишу Enter. Его название отобразится в окне вывода.",
+      "Справка",
       MessageBoxButtons.OK,
       MessageBoxIcon.Information);
   }
