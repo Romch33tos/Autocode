@@ -36,14 +36,14 @@ partial class RegionForm
   
     inputLabel.AutoSize = true;
     inputLabel.Font = new Font("Segoe UI", 11F);
-    inputLabel.Location = new Point(15, 123);
+    inputLabel.Location = new Point(12, 123);
     inputLabel.Name = "inputLabel";
     inputLabel.Size = new Size(100, 20);
     inputLabel.TabIndex = 1;
     inputLabel.Text = "Код региона:";
    
     codeTextBox.Font = new Font("Segoe UI", 11F);
-    codeTextBox.Location = new Point(121, 120);
+    codeTextBox.Location = new Point(115, 120);
     codeTextBox.MaxLength = 2;
     codeTextBox.Name = "codeTextBox";
     codeTextBox.Size = new Size(39, 27);
